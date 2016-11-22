@@ -10,25 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var heroes_component_1 = require('./heroes/heroes.component');
-var AppModule = (function () {
-    function AppModule() {
+//import { HeroesComponent }  from './heroes.component';
+var hero_list_component_1 = require('./hero-list.component');
+var HeroesModule = (function () {
+    function HeroesModule() {
     }
-    AppModule = __decorate([
+    HeroesModule = __decorate([
         core_1.NgModule({
             imports: [
+                core_1.NgModule,
                 platform_browser_1.BrowserModule
             ],
             declarations: [
-                app_component_1.AppComponent,
-                heroes_component_1.HeroesComponent,
+                //HeroesComponent,
+                hero_list_component_1.HeroListComponent
             ],
-            bootstrap: [app_component_1.AppComponent]
+            bootstrap: [] //[ //HeroesComponent ]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], HeroesModule);
+    return HeroesModule;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.HeroesModule = HeroesModule;
+//# sourceMappingURL=heroes.module.js.map

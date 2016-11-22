@@ -9,26 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var heroes_component_1 = require('./heroes/heroes.component');
-var AppModule = (function () {
-    function AppModule() {
+var hero_service_1 = require('./hero.service');
+var HeroListComponent = (function () {
+    function HeroListComponent(heroService) {
+        this.heroes = heroService.getHeroes();
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule
-            ],
-            declarations: [
-                app_component_1.AppComponent,
-                heroes_component_1.HeroesComponent,
-            ],
-            bootstrap: [app_component_1.AppComponent]
+    HeroListComponent = __decorate([
+        core_1.Component({
+            selector: 'hero-list',
+            template: "\n  <div *ngFor=\"let hero of heroes\">\n    {{hero.id}} - {{hero.name}}\n  </div>\n  "
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+        __metadata('design:paramtypes', [hero_service_1.HeroService])
+    ], HeroListComponent);
+    return HeroListComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.HeroListComponent = HeroListComponent;
+//# sourceMappingURL=hero-list.component.js.map
