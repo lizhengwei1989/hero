@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-//import { HeroesComponent }  from './heroes.component';
+var heroes_component_1 = require('./heroes.component');
 var hero_list_component_1 = require('./hero-list.component');
 var HeroesModule = (function () {
     function HeroesModule() {
@@ -18,14 +18,16 @@ var HeroesModule = (function () {
     HeroesModule = __decorate([
         core_1.NgModule({
             imports: [
-                core_1.NgModule,
                 platform_browser_1.BrowserModule
             ],
             declarations: [
-                //HeroesComponent,
+                heroes_component_1.HeroesComponent,
                 hero_list_component_1.HeroListComponent
             ],
-            bootstrap: [] //[ //HeroesComponent ]
+            exports: [
+                heroes_component_1.HeroesComponent,
+                hero_list_component_1.HeroListComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], HeroesModule);

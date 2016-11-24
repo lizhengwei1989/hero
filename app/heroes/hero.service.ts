@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Promise } from  'promise';
+//import { Promise } from  'promise';
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
 @Injectable()

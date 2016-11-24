@@ -10,7 +10,7 @@ import { HeroService } from './hero.service';
   `
 })
 export class HeroListComponent {
-    heroes: Hero[];
+    heroes: Promise<Hero[]>;
     constructor(heroService: HeroService) {
         this.heroes = heroService.getHeroes();
     }

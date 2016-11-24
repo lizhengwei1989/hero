@@ -13,7 +13,7 @@ import { HeroService } from './hero.service';
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>
-    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+    <!--<my-hero-detail [hero]="selectedHero"></my-hero-detail>-->
   `,
     styles: [`
     .selected {
@@ -66,7 +66,7 @@ import { HeroService } from './hero.service';
   `],
     providers: [HeroService]
 })
-export class AppComponent implements OnInit {
+export class HeroesComponent implements OnInit {
     title = 'Tour of Heroes';
     heroes: Hero[];
     selectedHero: Hero;
