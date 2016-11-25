@@ -7,8 +7,8 @@ exports.HEROES = [
     { id: 15, isSecret: false, name: 'Magneta' },
     { id: 16, isSecret: false, name: 'RubberMan' },
     { id: 17, isSecret: false, name: 'Dynama' },
-    { id: 18, isSecret: true, name: 'Dr IQ' },
-    { id: 19, isSecret: true, name: 'Magma' },
-    { id: 20, isSecret: true, name: 'Tornado' }
+    { id: 18, isSecret: false, name: 'Dr IQ' },
+    { id: 19, isSecret: false, name: 'Magma' },
+    { id: 20, isSecret: false, name: 'Tornado' }
 ];
 //# sourceMappingURL=mock-heroes.js.map
