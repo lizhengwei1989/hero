@@ -20,6 +20,7 @@ var HeroesComponent = (function () {
         this.heroService.getHeroes().then(function (heroes) { return _this.heroes = heroes; });
     };
     HeroesComponent.prototype.ngOnInit = function () {
+        console.log('我是英雄根组件');
         this.getHeroes();
     };
     HeroesComponent.prototype.onSelect = function (hero) {

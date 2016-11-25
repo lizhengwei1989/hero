@@ -66,11 +66,11 @@ export class HeroListComponent implements OnInit{
     selectedHero:Hero;
     _heroes=[];
     @Input()
-    public set heroes(v : []) {
+    public set heroes(v : any) {
         this._heroes = v;
         console.log(v);
     }
-    public get heroes(){
+    public get heroes():any{
         return this._heroes;
     }
     constructor() {
@@ -78,7 +78,7 @@ export class HeroListComponent implements OnInit{
     }
 
     ngOnInit(): void {
-
+        console.log('我是英雄列表组件')
     }
     onSelect(hero: Hero,e): void {
         console.log(hero);

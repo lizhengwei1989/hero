@@ -25,6 +25,7 @@ var HeroListComponent = (function () {
         configurable: true
     });
     HeroListComponent.prototype.ngOnInit = function () {
+        console.log('我是英雄列表组件');
     };
     HeroListComponent.prototype.onSelect = function (hero, e) {
         console.log(hero);
@@ -32,8 +33,8 @@ var HeroListComponent = (function () {
     };
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', Array), 
-        __metadata('design:paramtypes', [Array])
+        __metadata('design:type', Object), 
+        __metadata('design:paramtypes', [Object])
     ], HeroListComponent.prototype, "heroes", null);
     HeroListComponent = __decorate([
         core_1.Component({
