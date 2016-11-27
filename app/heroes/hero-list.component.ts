@@ -1,5 +1,4 @@
 import { Component,OnInit,Input }   from '@angular/core';
-import { Hero }        from './hero';
 @Component({
     selector: 'hero-list',
     template: `
@@ -60,28 +59,30 @@ import { Hero }        from './hero';
       border-radius: 4px 0 0 4px;
     }
   `]
+    //inputs:['tt','heroes']
 
 })
 export class HeroListComponent implements OnInit{
     selectedHero:Hero;
-    _heroes=[];
-    @Input()
-    public set heroes(v : any) {
-        this._heroes = v;
-        console.log(v);
-    }
-    public get heroes():any{
-        return this._heroes;
-    }
-    constructor() {
+    @Input()heroes : any;
+    @Input()tt:any;
+    //@Input('heroes') set changeName(val: any) {
+    //    console.log(val);
+    //}
+    //@Input('tt') set changeName(val2: any) {
+    //    console.log(val2);
+    //}
+    constructor(){
 
     }
 
     ngOnInit(): void {
         console.log('我是英雄列表组件')
+        console.log(this.tt);
     }
     onSelect(hero: Hero,e): void {
         console.log(hero);
         this.selectedHero = hero;
     }
 }
+13381185204

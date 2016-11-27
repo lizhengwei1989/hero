@@ -14,6 +14,7 @@ var HeroesComponent = (function () {
     function HeroesComponent(heroService) {
         this.heroService = heroService;
         this.title = 'Tour of Heroes';
+        this.tt = '222';
     }
     HeroesComponent.prototype.getHeroes = function () {
         var _this = this;
@@ -29,7 +30,9 @@ var HeroesComponent = (function () {
     HeroesComponent = __decorate([
         core_1.Component({
             selector: 'my-heroes',
-            template: "\n    <h1>{{title}}</h1>\n    <h2>My Heroes</h2>\n    <hero-list [heroes]=\"heroes\"></hero-list>\n    <!--<my-hero-detail [hero]=\"selectedHero\"></my-hero-detail>-->\n  ",
+            directives: 'HeroListComponent',
+            template: "\n    <h1>{{title}}</h1>\n    <h2>My Heroes</h2>\n    <div class=\"hero-list\">\n        <hero-list [tt]=\"tt\" [heroes]=\"heroes\"></hero-list>\n    </div>\n    <div class=\"hero-detail\">\n        <!--<my-hero-detail [hero]=\"selectedHero\"></my-hero-detail>-->\n    </div>\n  ",
+            styles: ["\n       .hero-list{width:16em;float:left}\n       .hero-detail{width:16em;float:left;margin-left:2em}\n    "],
             providers: [hero_service_1.HeroService]
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService])

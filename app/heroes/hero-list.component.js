@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,22 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var HeroListComponent = (function () {
+    //@Input('heroes') set changeName(val: any) {
+    //    console.log(val);
+    //}
+    //@Input('tt') set changeName(val2: any) {
+    //    console.log(val2);
+    //}
     function HeroListComponent() {
-        this._heroes = [];
     }
-    Object.defineProperty(HeroListComponent.prototype, "heroes", {
-        get: function () {
-            return this._heroes;
-        },
-        set: function (v) {
-            this._heroes = v;
-            console.log(v);
-        },
-        enumerable: true,
-        configurable: true
-    });
     HeroListComponent.prototype.ngOnInit = function () {
         console.log('我是英雄列表组件');
+        console.log(this.tt);
     };
     HeroListComponent.prototype.onSelect = function (hero, e) {
         console.log(hero);
@@ -33,9 +27,12 @@ var HeroListComponent = (function () {
     };
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', Object), 
-        __metadata('design:paramtypes', [Object])
-    ], HeroListComponent.prototype, "heroes", null);
+        __metadata('design:type', Object)
+    ], HeroListComponent.prototype, "heroes", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], HeroListComponent.prototype, "tt", void 0);
     HeroListComponent = __decorate([
         core_1.Component({
             selector: 'hero-list',
@@ -45,6 +42,7 @@ var HeroListComponent = (function () {
         __metadata('design:paramtypes', [])
     ], HeroListComponent);
     return HeroListComponent;
-}());
+})();
 exports.HeroListComponent = HeroListComponent;
+13381185204;
 //# sourceMappingURL=hero-list.component.js.map

@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,31 +7,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/**
+ * Created by zachary on 16/11/26.
+ */
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var heroes_module_1 = require('./heroes/heroes.module');
-var peek_a_boo_module_1 = require('./demo/peek-a-boo.module');
-var app_component_1 = require('./app.component');
-var AppModule = (function () {
-    function AppModule() {
+var peek_a_boo_parent_component_1 = require('./peek-a-boo-parent.component');
+var peek_a_boo_component_1 = require('./peek-a-boo.component');
+var PeekABooModule = (function () {
+    function PeekABooModule() {
     }
-    AppModule = __decorate([
+    PeekABooModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule,
-                heroes_module_1.HeroesModule,
-                peek_a_boo_module_1.PeekABooModule
+                platform_browser_1.BrowserModule
             ],
             declarations: [
-                app_component_1.AppComponent
+                peek_a_boo_parent_component_1.PeekABooParentComponent,
+                peek_a_boo_component_1.PeekABooComponent
             ],
-            bootstrap: [app_component_1.AppComponent]
+            exports: [
+                peek_a_boo_parent_component_1.PeekABooParentComponent,
+                peek_a_boo_component_1.PeekABooComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
-}());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+    ], PeekABooModule);
+    return PeekABooModule;
+})();
+exports.PeekABooModule = PeekABooModule;
+//# sourceMappingURL=peek-a-boo.module.js.map

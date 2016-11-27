@@ -4,7 +4,6 @@
  */
 var Hero = (function () {
     function Hero() {
-        this.isSecret = false;
     }
     return Hero;
 }());

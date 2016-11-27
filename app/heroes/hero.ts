@@ -4,5 +4,6 @@
 export class Hero {
     id: number;
     name: string;
-    isSecret = false;
+    isSecret : boolean;
+    description:string;
 }
